@@ -13,32 +13,48 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <link rel="stylesheet" href="./index.css" >
+
 </head>
-<body>
+<body class="background">
+  <main>
+    <h1>SPLITTER</h1>
+    <div class="calculator">
+      <div class="inputs">
+        <label for="bill">
+          Bill
+        </label>
+        <input id="bill">
+        </input>
+        <label>
+          Select Tip %
+        </label>
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <button>Custom</button>
+        <label for="number-of-people">
+          Number of People
+        </label>
+        <input id="number-of-people" />
+      </div>
+    <div class="totals">
+      Tip Amount
+      / person
+    
+      Total
+      / person
+    
+      Reset
+    </div>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </main>
 </body>
 </html>

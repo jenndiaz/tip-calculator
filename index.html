@@ -21,33 +21,41 @@
     <h1>SPLITTER</h1>
     <div class="calculator">
       <div class="inputs">
-        <label for="bill">
-          Bill
-        </label>
-        <input id="bill">
-        </input>
-        <label>
-          Select Tip %
-        </label>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <button>Custom</button>
-        <label for="number-of-people">
+        <div>
+          <label for="bill">
+          Bill        
+          <input type="text" id="bill" name="bill" value>
+          </input>
+          </label>
+        </div>
+        <div>
+          <label>
+            Select Tip %
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <button>Custom</button>
+          </label>
+        </div>
+        <div>
+           <label for="people">
           Number of People
-        </label>
-        <input id="number-of-people" />
+          </label>
+          <input type="text" name="people" id="people" />
+        </div>
       </div>
     <div class="totals">
       Tip Amount
       / person
-    
+      *TIP NUMBER HERE*
       Total
       / person
-    
-      Reset
+      <p id="total">$0.00</p>
+      <button>
+        Reset
+      </button>
     </div>
 
     </div>

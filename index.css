@@ -16,9 +16,14 @@
   padding: 20px;
 }
 .inputs{
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px 5px;
 }
 .totals{
   background-color: hsl(183, 100%, 15%);
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px 5px;
 }

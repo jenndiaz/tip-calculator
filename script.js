@@ -1,8 +1,10 @@
 const inputBill = document.querySelector('input[name="bill"]')
 const inputPeople = document.querySelector('input[name="people"]')
 
+
 inputBill.addEventListener("keyup", calc)
 inputPeople.addEventListener("keyup", calc)
+
 let tipPercent = 5 
 const tipOptions = document.getElementsByName('option')
 tipOptions.forEach(adjustTipPercent)
@@ -23,9 +25,11 @@ function formatPrice(num) {
 }
 
 function calc() {
+  console.log('calc')
   const billAmount = parseInt(document.querySelector('input[name="bill"]').value)
   const numberOfPeople = parseInt(document.querySelector('input[name="people"]').value)
 
+  console.log(billAmount)
 
   if (billAmount && numberOfPeople && tipPercent) {
     const total = document.getElementById('total')
@@ -34,6 +38,17 @@ function calc() {
     total.innerHTML = formatPrice(tip / numberOfPeople)
     totalPerPerson.innerHTML = formatPrice(billAmount + tip)
   }
+}
+
+const resetButton = document.getElementById('reset')
+resetButton.onclick = function () {
+  console.log('reset')
+  document.getElementById('bill').value = null
+  document.getElementById('people').value = null
+  const total = document.getElementById('total')
+  const totalPerPerson = document.getElementById('totalPerPerson')
+  total.innerHTML = '$0.00'
+  totalPerPerson.innerHTML = '$0.00'
 }
 
 console.log('script!!')

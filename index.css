@@ -9,17 +9,19 @@
 }
 
 .calculator{
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 400px;
   background-color: white;
   display: flex;
   padding: 20px;
   border-radius: 5%;
+  font-family: 'Space Mono', monospace;
 }
 .inputs{
   display: flex;
   flex-direction: column;
   gap: 20px 5px;
+  width: 100%;
 }
 .totals{
   background-color: hsl(183, 100%, 15%);
@@ -30,6 +32,16 @@
   border-radius: 5%;
   padding: 25px;
   width: 100%;
+  display: grid;
+  grid-template-areas:  "label total"
+                        "label total"
+
+}
+
+.total{
+  color:hsl(172, 67%, 45%);
+  font-size: 28px;
+  font-weight: 700;
 }
 
 #reset{
@@ -41,4 +53,6 @@
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 5px;
+  grid-column: 1 / span 2;
+  height: 45px;
 }

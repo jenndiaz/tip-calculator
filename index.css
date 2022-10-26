@@ -18,12 +18,16 @@
   font-family: 'Space Mono', monospace;
 }
 .inputs{
-  display: flex;
-  flex-direction: column;
-  gap: 20px 5px;
+  display: grid;
+  align-items: center;
+  align-content: stretch;
   width: 100%;
+  padding: 25px;
 }
 .totals{
+  display: grid;
+  grid-template-areas:  "label total"
+                        "label total";
   background-color: hsl(183, 100%, 15%);
   color: white;
   display: flex;
@@ -32,10 +36,6 @@
   border-radius: 5%;
   padding: 25px;
   width: 100%;
-  display: grid;
-  grid-template-areas:  "label total"
-                        "label total"
-
 }
 
 .total{
@@ -55,4 +55,30 @@
   border-radius: 5px;
   grid-column: 1 / span 2;
   height: 45px;
+}
+
+input{
+  position: relative;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  padding: 10px;
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  text-align: right; 
+  border-radius: 10px;
+}
+
+/* .styledInput{
+  display: flex;
+  border-radius: 0px 10px;
+} */
+
+.inputIcon{
+  position: absolute;
+  z-index: 10;
+  height: 20px;
+  width: auto;
+  padding: 12px;
 }

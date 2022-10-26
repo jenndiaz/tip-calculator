@@ -16,13 +16,14 @@
     <img src="./images/logo.svg" alt="splitter" />
     <div class="calculator">
       <div class="inputs">
-        <form>
-          <label for="bill">
-          Bill        
-          <input type="text" id="bill" name="bill" value>
-          </input>
-          </label>
-        </form>
+        <label for="bill">
+          Bill 
+        </label> 
+        <div class="styledInput">
+          <img class="inputIcon" src="./images/icon-dollar.svg" alt="" />    
+          <input type="text" id="bill" name="bill" value />
+        </div>
+        
         <fieldset>
           <legend>Select Tip</legend>
           <label for="5">5%</label>
@@ -30,12 +31,10 @@
           <label for="5">10%</label>
           <input type="radio" name="option" value="10" id="10"/>
         </fieldset>
-        <div>
-          <label for="people">
-          Number of People
-          </label>
-          <input type="text" name="people" id="people" />
-        </div>
+        <label for="people">
+        Number of People
+        </label>
+        <input type="text" name="people" id="people" />
       </div>
     <div class="totals">
       <div class="label">

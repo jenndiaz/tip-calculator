@@ -1,5 +1,10 @@
 /* - Mobile: 375px
 - Desktop: 1440px */
+header{
+  display: flex;
+  justify-content: space-around;
+  padding: 75px;
+}
 .background{
   background-color: hsl(185, 41%, 84%);
   display: flex;
@@ -57,6 +62,13 @@
   height: 45px;
 }
 
+label{
+  align-self: end;
+  margin-bottom: 2px;
+  color: hsl(184, 14%, 56%);
+  font-weight: bold;
+}
+
 input{
   position: relative;
   background-color: hsl(189, 41%, 97%);
@@ -69,11 +81,6 @@ input{
   text-align: right; 
   border-radius: 10px;
 }
-
-/* .styledInput{
-  display: flex;
-  border-radius: 0px 10px;
-} */
 
 .inputIcon{
   position: absolute;

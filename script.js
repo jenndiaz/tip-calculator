@@ -1,21 +1,29 @@
 const inputBill = document.querySelector('input[name="bill"]')
 const inputPeople = document.querySelector('input[name="people"]')
-
+const percentInputs = document.querySelectorAll('input[type="radio"]')
+const percentLabels = document.querySelectorAll('.radio-toolbar label')
 
 inputBill.addEventListener("keyup", calc)
 inputPeople.addEventListener("keyup", calc)
+percentInputs.forEach(input => input.addEventListener("change", adjustTipPercent)
+)
 
-let tipPercent = null 
-const tipOptions = document.getElementsByName('option')
-tipOptions.forEach(adjustTipPercent)
 
-function adjustTipPercent(option) {
-  option.addEventListener('change', function () {
+let tipPercent = 0 
+
+function adjustTipPercent() {
+  console.log('this.value', this.value)
     if (this.value !== tipPercent) {
       tipPercent = this.value
     }
+    percentLabels.forEach(label => label.classList.remove('tip-active'))
+    percentLabels.forEach(label => {
+      if (label.htmlFor === this.value) {
+        console.log('sames', label.classList)
+        label.classList.add('tip-active')
+      }
+    }) 
     calc()
-  })
 }
 
 function formatPrice(num) {
@@ -35,7 +43,6 @@ function calc() {
     const total = document.getElementById('total')
     const totalPerPerson = document.getElementById('totalPerPerson')
     const tip = billAmount * (tipPercent / 100)
-    console.log('tip', tip)
     total.innerHTML = formatPrice(tip / numberOfPeople)
     totalPerPerson.innerHTML = formatPrice(billAmount + tip)
   }
